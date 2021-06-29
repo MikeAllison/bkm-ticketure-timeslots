@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Timeslots</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <style>
+      .container {
+        margin-top: 20px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.1.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="ui center aligned container">
+      <div class="ui segment">
+        <div class="ui form" id="form-div">
+          <div class="two fields">
+            <div class="field">
+              <label>Event ID</label>
+              <input type="text" placeholder="Event ID" id="event-id-input" />
+            </div>
+            <div class="field">
+              <label>Date</label>
+              <input type="date" id="event-date-input" />
+            </div>
+          </div>
+          <div class="ui warning message">
+            <div id="form-error-msg"></div>
+          </div>
+          <div class="ui submit button" id="update-btn">Submit</div>
+        </div>
+      </div>
+      <div class="ui raised segment">
+        <h3 id="event-id-header"></h3>
+        <table class="ui grey celled table">
+          <thead>
+            <tr>
+              <th>Timeslot</th>
+              <th>Sold Qty.</th>
+              <th>Used Cap.</th>
+              <th>Capacity</th>
+              <th>Sold Out?</th>
+              <th>Oversell Cap.</th>
+              <th>Oversold Out?</th>
+              <th>Redeemed Ct.</th>
+            </tr>
+          </thead>
+          <tbody id="timeslot-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
